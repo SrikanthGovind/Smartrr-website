@@ -1,0 +1,49 @@
+.video-con{
+     height: 500px;
+     background: linear-gradient(rgb($bg-5,.96),rgb($bg-5,.96)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzoJ4fBRIDNARJ9j6fZ4-uc1YE20rTyLXLJg&s);
+     background-repeat: no-repeat;
+     background-size: cover;
+    margin: 0 2rem;
+     border-radius: 2.5rem;
+     color: white;
+     @include center;
+     flex-direction: column;
+     gap: 2rem;
+       h1{
+        font-size: 4rem;
+        font-weight: 400;
+        font-family: 'sans-serif';
+       }
+       button{
+        padding:  1rem 2.5rem;
+        border-radius:6px;
+        color: $text-col;
+        border: 0;
+        outline: 0;
+        font-size: 1.1rem;
+          background: $text-col4;
+       }
+}
+@include responsive(tab){
+     .video-con{
+      padding: 3rem 1rem;
+      h1{
+        text-align: center;
+      }
+     }
+
+}
+
+@include responsive(phone){
+  .video-con{
+   padding: 3rem 1rem;
+   h1{
+     text-align: center;
+     font-size: 2.5rem;
+   }
+   button{
+  font-size: 1rem;
+   }
+  }
+
+}

@@ -1,0 +1,168 @@
+.dummy-container{
+    background:white;
+  margin: 3rem 2rem;
+  padding: 6rem;
+  border-radius: 2.5rem;
+   @include center; 
+   justify-content :space-around;
+   
+   .dummy-item{
+        width: 25%;
+        height: 500px;
+        @include center;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 3rem;
+       color:$text-col;
+
+   }
+   .dummy-1{
+        h1{
+            font-size: 3rem;
+            text-align: center;
+         font-weight: 400;
+       line-height: 1;
+       color:$text-col;
+
+        }
+        p{
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 100;
+            line-height: 1.4;
+            color:$text-col;
+
+        }
+       }
+
+       .dummy-2{
+        img{
+          width:100%;
+          height: 100%;
+          object-fit: cover;
+        }
+       }
+       .dummy-3{
+        gap: 3rem;
+      h3{
+        font-size: 3rem;
+        font-weight: 100;
+       padding-bottom: .5rem;
+       color:$text-col;
+
+      }
+       p{
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 1.4;
+       padding-bottom: .5rem;
+       color:$text-col;
+
+       }
+       .item-btn{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+          width:fit-content;
+          padding:  0 1rem 0 .3rem;
+          background:$bg-3 ;
+          border-radius: 3rem;
+          i{
+            border-radius: 100%;
+            padding: .7rem;
+            background-color: $text-col4;
+          }p{
+            padding: .7rem;
+            
+          }
+          &:hover{
+            background: $text-col4;
+
+          }
+          &:hover i {
+            transform: translate(8rem);
+          transition: all .5s ease-in-out;
+
+
+           }
+           &:hover p {
+            transform: translate(-30%);
+          transition: all .5s ease-in-out;
+
+           }
+       }
+
+       
+       }
+}
+
+
+@include responsive (phone){
+  .dummy-container{
+   flex-direction: column;
+   padding: 1rem;
+   .dummy-item{
+     width: 100%;
+
+   }
+   .dummy-1{
+    h1{
+      font-size: 2rem;
+    }
+    p{
+font-size: 1rem;
+    }
+}
+
+
+.dummy-2{
+  padding: 1rem;
+}
+
+.dummy-3{
+  .item-card{
+      h3{
+        font-size: 2rem;
+        
+      }
+      p{
+        font-size: 1rem;
+      }
+  }
+}
+
+
+
+
+  }
+}
+
+@include responsive (tab){
+   .dummy-container{
+    flex-direction: column;
+    padding: 1rem;
+    .dummy-item{
+      width: 100%;
+    }
+   }
+}
+
+@include responsive (tab-por){
+  .dummy-container{
+   flex-direction: column;
+   padding: 1rem;
+   .dummy-item{
+     width: 100%;
+   }
+  }
+}
+@include responsive(desktop){
+  .dummy-container{
+   padding: 3rem;
+   gap: 2rem;
+   .dummy-item{
+    width: 30%;
+    padding: 0;
+   }
+  }
+}

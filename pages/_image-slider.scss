@@ -1,0 +1,232 @@
+.image-slider{
+    margin: 0 2rem;
+    position: relative;
+
+    // @include center;
+      
+.img-lg-con{
+    width: 100%;
+    height: 800px;
+  border-radius:2.5rem ;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 100%;
+    flex: none;
+    object-fit: cover;
+    border-radius:2.5rem ;
+    animation: moveleft 12s linear infinite;
+    animation-fill-mode: forwards;
+ 
+  }
+
+}
+.img-sm-con{
+    width: 100%;
+    @include center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2000;
+    .wrapper{
+          width: 50%;
+          @include center;
+          gap: 5rem;
+          flex: 1;
+
+          .left-arrow,.right-arrow{
+            font-size: 1rem;
+              padding: .8rem;
+              border-radius: 100%;
+              background: $text-col4;
+          }
+          .img-con{
+            width: 40rem;
+              display: flex;
+              justify-content: flex-start;
+              gap: 0rem;
+              overflow: hidden;
+             
+
+              .card{
+
+                flex: none;
+               width: 100%;
+               height: 100%;
+                padding: 3rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+                flex-direction: column;
+                gap: 1.5rem;
+              background: $text-col3;
+             border-radius: 2rem;
+             animation: moveleft 12s linear infinite;
+
+                .profile{
+                     width: 5rem;
+                     height: 5rem;
+                     img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100%;
+                        object-fit: cover;
+                     }
+                }
+                .text{
+                    font-size: 2rem;
+                    padding-bottom: 1rem;
+                    font-family: 'Courier New', Courier, monospace;
+                }
+                .wrap{
+           @include center;
+            flex-direction: column;
+            gap: 1rem;
+                .name{
+                   font-size: 1.7rem;
+                   font-weight: 500;
+                }
+                .role{
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                }
+              }
+            }
+            .para{
+                font-size: 1.2rem;
+                line-height: 1.7;
+                font-weight: 100;
+            }
+          }
+    }
+}
+    
+
+
+}
+
+@keyframes moveleft {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
+
+@include responsive(phone){
+  .image-slider{
+   .img-lg-con{
+     height: 650px;
+   }
+   .img-sm-con{
+      width: 80%;
+     .wrapper{
+       width: 90%;
+       height: 70%;
+         .left-arrow ,.right-arrow{
+            display: none;
+         }
+         .img-con{
+            width: 100%;
+            .card{
+             padding: 1rem;
+             .text{
+              font-size: 1rem;
+             }
+             .wrap{
+              .name{
+                font-size: 1rem;
+               }
+               .role{
+                font-size: 1rem;
+               }
+              
+             }
+             .para{
+              font-size: .7rem;
+              text-align: center;
+             }
+            }
+           
+         }
+     }
+   }
+  }
+}
+
+@include responsive(tab){
+   .image-slider{
+    .img-lg-con{
+      height: 650px;
+    }
+    .img-sm-con{
+       width: 80%;
+      .wrapper{
+        width: 90%;
+        height: 70%;
+          .left-arrow ,.right-arrow{
+             display: none;
+          }
+          .img-con{
+             width: 100%;
+             .card{
+              padding: 1rem;
+             }
+             .para{
+              font-size: 1rem;
+              text-align: center;
+             }
+            
+          }
+      }
+    }
+   }
+}
+
+@include responsive(tab-por){
+  .image-slider{
+   .img-lg-con{
+     height: 650px;
+   }
+   .img-sm-con{
+      width: 50%;
+     .wrapper{
+       width: 90%;
+       height: 70%;
+         .left-arrow ,.right-arrow{
+            display: none;
+         }
+         .img-con{
+            width: 100%;
+            .card{
+             padding: 1rem;
+            }
+            .para{
+             font-size: 1rem;
+             text-align: center;
+            }
+           
+         }
+     }
+   }
+  }
+}
+
+@include responsive(desktop){
+   .image-slider{
+    .img-lg-con{
+      height: 650px;
+    }
+    .img-sm-con{
+      .wrapper{
+        width: auto;
+      }
+    }
+   }
+}

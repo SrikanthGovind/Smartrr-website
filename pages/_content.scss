@@ -1,0 +1,130 @@
+.content-container{
+     padding:10rem 17rem;
+     margin: 0 2rem;
+    background: $bg-5;
+     border-radius: 2.5rem;
+      .con-btn{
+           width:fit-content;
+            font-size: 1.4rem; 
+            font-weight: 50;
+            border: 1px solid $text-col2;
+            padding: .5rem 1rem;
+            border-radius: 3rem;
+        color: $text-col3;
+        }
+.con-head{
+    padding-top:1rem;
+      line-height: .9;
+    h1{
+        color: $text-col3;
+        font-size: 5.5rem;
+        padding-bottom: 1rem;
+    }
+     h1:nth-child(2){
+          font-size: 7rem;
+          color: $text-col4;
+        padding-bottom: 1rem;
+
+     }     
+}
+.con-con{
+    color: $text-col3;
+    font-size: 2rem;
+    width: fit-content;
+    padding:1rem 6rem  0  0;
+ }
+        
+
+}
+
+@include responsive(phone){
+  .content-container{
+    padding: 1rem;
+    @include center;
+    flex-direction: column;
+    gap: 2rem;
+    .con-btn{
+       margin-top: 1rem;
+       font-size: 1rem;
+    }
+    .con-head{
+      width: 100%;
+      padding-left: 1rem;
+      h1{
+        font-size: 1.7rem;
+      }
+      h1:nth-child(2){
+        font-size: 2.5rem;
+
+   } 
+    }
+    .con-con{
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+ 
+}
+
+
+@include responsive(tab){
+  .content-container{
+    padding: 1rem;
+    @include center;
+    flex-direction: column;
+    gap: 2rem;
+    .con-btn{
+       margin-top: 1rem;
+    }
+    .con-head{
+      width: 100%;
+      padding-left: 1rem;
+      h1{
+        font-size: 2.5rem;
+      }
+      h1:nth-child(2){
+        font-size: 4rem;
+
+   } 
+    }
+    .con-con{
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+ 
+}
+
+@include responsive(tab-por){
+  .content-container{
+    padding: 1rem;
+    @include center;
+    flex-direction: column;
+    gap: 2rem;
+    .con-btn{
+       margin-top: 1rem;
+    }
+    .con-head{
+      width: 100%;
+      padding-left: 1rem;
+      h1{
+        font-size: 2.5rem;
+      }
+      h1:nth-child(2){
+        font-size: 4rem;
+
+   } 
+    }
+    .con-con{
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+ 
+}
+
+@include responsive(desktop){
+   .content-container{
+    padding: 3rem;
+   }
+}

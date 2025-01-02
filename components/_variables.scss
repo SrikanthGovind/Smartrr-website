@@ -1,0 +1,50 @@
+
+$bg-1:#0e0c14;
+$bg-2:#431c46;
+$bg-3:#e5e2e7;
+$bg-5:#290820;
+$bg-4:rgba(190, 165, 165, 0.136);
+$text-col:#3b1e33;
+$text-col2:rgb(231, 230, 250);
+$text-col3:#f1f1fc;
+$text-col4:#cef31e;
+$lav:#e6e6fa;
+
+
+// fontsize
+
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+@mixin responsive($device){
+    @if($device == "phone"){
+         @media (min-width:360px) and (max-width:480px){
+               @content;
+         }
+    }
+    @if($device == "tab"){
+        @media (min-width:481px) and (max-width: 780px){
+              @content;
+        }
+   } 
+   @if($device == "tab-por"){
+    @media (min-width: 781px) and (max-width:1000px){
+          @content;
+    }
+     } 
+   @if($device == "desktop"){
+    @media (min-width:1001px) and (max-width:1400px){
+          @content;
+    }
+   }
+}

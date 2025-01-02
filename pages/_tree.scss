@@ -1,0 +1,128 @@
+.tree-con{
+  background:rgb(3, 3, 46);
+  color: white;
+  margin: 3rem 2rem;
+  border-radius: 2.5rem;
+  @include center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 3.5rem;
+  .tree-head{
+    font-size: 4rem;
+    position: relative;
+    width: 70%;
+    line-height: 1.2;
+    &::after{
+        content: '';
+        clip-path: polygon(57% 61%, 36% 69%, 15% 60%, 56% 61%);
+          width: 100rem;
+          height: 5rem;
+          display: block;
+          background:$text-col4;
+          position: absolute;
+      top:1rem;
+      left:-3rem;
+    }
+  }
+  .tree-image{
+
+    width: 100%;
+    height: 400px;
+    img{
+        width: 100%;
+        height:100% ;
+        object-fit: contain;
+        border-radius: 3rem;
+    }
+  }
+.btn{
+    width: 100%;
+    text-align: end;
+  button{
+    padding:  1rem 2.5rem;
+    border-radius:6px;
+    color: $text-col;
+    border: 0;
+    outline: 0;
+    font-size: 1.1rem;
+      background: $text-col4;
+   }
+}
+}
+
+
+
+@include responsive(phone){
+  .tree-con{
+   gap: 2rem;
+   padding: 3rem 1rem;
+   .tree-head{
+     width: 100%;
+     font-size: 2rem;
+     text-align: center;
+     &::after{
+       display: none;
+     }
+   }
+   .tree-image{
+      height: 200px;
+      object-fit: contain;
+   }
+   .btn{
+    text-align: center;
+   }
+  }
+}
+
+
+@include responsive(tab){
+   .tree-con{
+    gap: 2rem;
+    padding: 3rem 1rem;
+    .tree-head{
+      width: 100%;
+      font-size: 2rem;
+      text-align: center;
+      &::after{
+        display: none;
+      }
+    }
+    .tree-image{
+       height: 200px;
+       object-fit: contain;
+    }
+   }
+}
+
+@include responsive(tab-por){
+  .tree-con{
+   gap: 2rem;
+   padding: 3rem;
+   .tree-head{
+     width: 100%;
+     font-size: 2rem;
+     text-align: center;
+     line-height: 1.7;
+     &::after{
+       top: 0;
+       left: -15rem;
+     }
+   }
+   .tree-image{
+      height: 300px;
+      object-fit: contain;
+   }
+  }
+}
+
+@include responsive(desktop){
+  .tree-con{
+    padding: 2rem;
+    .tree-head{
+      width: 90%;
+      &::after{
+        left: -15rem;
+      }
+    }
+  }
+}

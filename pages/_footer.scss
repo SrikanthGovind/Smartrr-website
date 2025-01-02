@@ -1,0 +1,319 @@
+.footer
+{
+    background: white;
+    margin:2rem 2rem;
+    border-radius: 2.5rem;
+    padding: 0rem;
+    @include center;
+    gap: 3rem;
+    .wrapper{
+          width: 90%;
+          padding: 1rem;
+          .part-1{
+            width: 100%;
+            border-bottom: 2px solid rgb(236, 237, 236);
+            @include center;
+            .form-con{
+                width: 45%;
+              display: flex;
+              align-items: flex-start;
+               justify-content: center;
+              flex-direction: column;
+              gap: 6rem;
+                .form-head{
+                    p{
+                        font-size: 2rem;
+                        font-weight:normal;
+                        color:$bg-5;
+                    }
+                }
+
+                .form-input{
+                    width: 100%;
+                     h3{
+                        font-size: 2rem;
+                        font-weight:800;
+                        padding-bottom: 1rem;
+                        color:$bg-5;
+                     }
+                     input{
+                        width: 60%;
+                        font-size: 1.2rem;
+                        padding: 1rem 3rem;
+                        border-radius:6px;
+                        color: $bg-1;
+                        background: $text-col3;
+                        border: 0;
+                        outline: 0;
+                       
+                     } ::placeholder{
+                        color: $bg-1;
+                        font-weight:500;
+                        letter-spacing: .5px;
+                        font-size: 1rem;
+
+                        }
+                     button{
+                        width: 25%;
+                        font-size: 1.2rem;
+                        padding: 1rem 3rem;
+                        border: 0;
+                        outline: 0;
+                        border-radius:6px;
+
+                        font-weight:500;
+                        background: $bg-2;
+                        color: white;
+                        margin-left: .5rem;
+
+                     }
+                }
+            }
+            .list-con{
+                width: 55%;
+                @include  center;
+                padding:.5rem;
+                .list-item{
+                    li{
+                        font-size: 1.2rem;
+                        padding: 1rem;
+                        &:not(:first-child){
+                            color: rgb(60, 62, 62);
+                            font-weight: 100;
+                       }
+                    }
+                   
+                }
+
+            }
+
+          }
+          .part-2{
+            width: 100%;
+            @include space;
+            padding: 3rem 0;
+               .copy-right{
+                @include center;
+                font-size: 1.1rem;
+                p{
+                    padding-right: 1rem;
+                    border-right: 1px solid grey;
+                    
+    
+                }
+                pre{
+                    padding-left: 1rem;
+                }
+               }
+
+               .icons{
+                i{
+                    font-size: 2.5rem;
+                    padding-left: 1.5rem;
+                    color:$bg-5 ;
+                }
+            }
+          }
+
+    }
+}
+
+
+
+@include responsive(phone){
+    .footer{
+        padding: 3rem 1rem;
+        .wrapper{
+            padding:0;
+            width: 100%;
+            .part-1{
+                width: 100%;
+                flex-direction: column;
+                gap: 3rem;
+                .form-con{
+                    width: 100%;
+                    .form-input{
+                         input{
+                            width: 100%;
+                            margin-top: 2rem;
+
+                         }
+                         button{
+                            width: 50%;
+                            margin-top: 1rem;
+                            margin-left: 0;
+                         }
+                    }
+                }
+                .list-con{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2rem; 
+                    .list-item{
+
+                   
+                    li{
+                        font-size: 1rem;
+                    }
+                }
+                }
+            }
+            .part-2{
+                width: 100%;
+                flex-direction: column;
+                gap: 2rem;
+                .copy-right{
+                    flex-direction: column;
+                  gap: 2rem;
+                  font-size: .8rem;
+                  
+                  p{
+                    border: none;
+                    border: 0;
+                    padding: 0;
+                  }
+                  pre{
+                    padding-left: 0;
+                  }
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive(tab){
+    .footer{
+        padding: 3rem 1rem;
+        .wrapper{
+            padding:0;
+            width: 100%;
+            .part-1{
+                width: 100%;
+                flex-direction: column;
+                gap: 3rem;
+                .form-con{
+                    width: 100%;
+                    .form-input{
+                         input{
+                            width: 100%;
+                            margin-top: 2rem;
+
+                         }
+                         button{
+                            width: 50%;
+                            margin-top: 1rem;
+                            margin-left: 0;
+                         }
+                    }
+                }
+                .list-con{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2rem;
+                }
+            }
+            .part-2{
+                width: 100%;
+                flex-direction: column;
+                gap: 2rem;
+                .copy-right{
+                    flex-direction: column;
+                  gap: 2rem;
+                  p{
+                    border: none;
+                  }
+                  pre{
+                    padding-left: 0;
+                  }
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive(tab-por){
+    .footer{
+        padding: 3rem 1rem;
+        .wrapper{
+            padding:0;
+            width: 100%;
+            .part-1{
+                width: 100%;
+                flex-direction: column;
+                gap: 3rem;
+                .form-con{
+                    width: 100%;
+                    .form-input{
+                         input{
+                            width: 100%;
+                            margin-top: 2rem;
+
+                         }
+                         button{
+                            width: 50%;
+                            margin-top: 1rem;
+                            margin-left: 0;
+                         }
+                    }
+                }
+                .list-con{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2rem;
+                }
+            }
+            .part-2{
+                width: 100%;
+                flex-direction: column;
+                gap: 2rem;
+                .copy-right{
+                    flex-direction: column;
+                  gap: 2rem;
+                  p{
+                    border: none;
+                  }
+                  pre{
+                    padding-left: 0;
+                  }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(desktop){
+     .footer{
+        padding: 1rem;
+        .wrapper{
+            width: 100%;
+            padding: 0;
+            .part-1{
+                .form-con{
+                    .form-input{
+
+                   
+                    button{
+                       padding: 1rem;
+                    }
+                }
+            }
+            .list-con{
+                .list-item{
+                   li{
+                    font-size: 1rem;
+        
+                   }
+                }
+            }
+        }
+     }
+}
+}
+
+
+

@@ -1,0 +1,81 @@
+.slide-container{
+  background:$bg-4;
+  margin: 3rem 2rem;
+  padding: 5rem;
+  border-radius: 2.5rem;
+  @include center;
+  gap: 5rem;
+  position: relative;
+  overflow: hidden;
+
+   &::after{
+     content: '';
+     width: 150px;
+     height: 100%;
+     position: absolute;
+     left: -5px;
+     z-index: 10;
+     overflow: hidden;
+     background:linear-gradient(to right ,rgb(228, 221, 228),transparent 100%);
+   }
+   &::before{
+    content: '';
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left:92% ;
+    z-index: 10;
+    overflow: hidden;
+    background:linear-gradient(to left ,rgb(228, 221, 228),transparent 100%);
+  }
+  .slide{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $text-col;
+    text-transform:capitalize;
+    white-space: nowrap;
+    position: absolute;
+    left:calc(200px * 10);
+    animation: slide 30s linear infinite;
+  }
+  .item-1{
+    animation-delay:calc((30s / 10)*(10 - 1)* -1) ;
+  }
+  .item-2{
+    animation-delay:calc((30s / 10)*(10 - 2)* -1) ;
+  } 
+  .item-3{
+    animation-delay:calc((30s / 10)*(10 - 3)* -1) ;
+  }
+  .item-4{
+    animation-delay:calc((30s / 10)*(10 - 4)* -1) ;
+  }
+  .item-5{
+    animation-delay:calc((30s / 10)*(10 - 5)* -1) ;
+  }
+  .item-6{
+    animation-delay:calc((30s / 10)*(10 - 6)* -1) ;
+  }
+  .item-7{
+    animation-delay:calc((30s / 10)*(10 - 7)* -1) ;
+  }
+  .item-8{
+    animation-delay:calc((30s / 10)*(10 - 8)* -1) ;
+  }
+  .item-9{
+    animation-delay:calc((30s / 10)*(10 - 9)* -1) ;
+  }
+  .item-10{
+    animation-delay:calc((30s / 10) *(10 - 10)* -1) ;
+  }
+
+
+}
+@keyframes slide{
+  to{
+  left :-200px;
+  }
+}
